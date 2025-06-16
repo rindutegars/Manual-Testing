@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "afc0fd5c-be79-4e3a-9500-03ddaf1dd38c",
+		"name": "Food Order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32082663"
+	},
+	"item": [
+		{
+			"name": "Spring Boot",
+			"item": [
+				{
+					"name": "User Management",
+					"item": [
+						{
+							"name": "Sign Up",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"gggg\",\r\n    \"fullname\": \"YESYYYYY\",\r\n    \"password\": \"P@ssword123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/user-management/users/sign-up",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user-management",
+										"users",
+										"sign-up"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sign In",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"springboot\",\r\n    \"password\": \"P@ssword123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/user-management/users/sign-in",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user-management",
+										"users",
+										"sign-in"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Food Order",
+					"item": [
+						{
+							"name": "Toggle Favorite",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/food-order/foods/51/favorites",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"food-order",
+										"foods",
+										"51",
+										"favorites"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Food Orders",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/food-order/foods?userId=&food_name=&categoryId=&sortBy=&pageSize=1&pageNumber=",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"food-order",
+										"foods"
+									],
+									"query": [
+										{
+											"key": "userId",
+											"value": ""
+										},
+										{
+											"key": "food_name",
+											"value": ""
+										},
+										{
+											"key": "categoryId",
+											"value": ""
+										},
+										{
+											"key": "sortBy",
+											"value": ""
+										},
+										{
+											"key": "pageSize",
+											"value": "1"
+										},
+										{
+											"key": "pageNumber",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add to Cart",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"foodId\": \"86\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/food-order/foods/cart/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"food-order",
+										"foods",
+										"cart",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Cart",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/food-order/foods/cart/86/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"food-order",
+										"foods",
+										"cart",
+										"86",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
